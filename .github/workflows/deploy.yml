@@ -23,7 +23,11 @@ jobs:
     - name: Connect to Railway
       env:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-      run: railway run
+      run: railway run pnpm build
+    - name: Change directory
+      run: railway run cd apps/web
+    - name: Run app
+      run: railway run pnpm start
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: Run Railway
