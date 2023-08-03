@@ -1,9 +1,8 @@
-name: Deploy
+name: Railway Test Environment Deploy
 
 on:
   push:
     branches:
-      - main
       - "TEST-**"
   pull_request:
     types: [opened, synchronize, reopened]
