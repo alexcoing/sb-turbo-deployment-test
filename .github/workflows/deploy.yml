@@ -24,10 +24,10 @@ jobs:
         run: node -v
       - name: Install Railway
         run: npm i -g @railway/cli
-      - name: Select Environment
-        run: railway environment sb-turbo-deployment-test-pr-1
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      # - name: Select Environment
+      #   run: railway environment sb-turbo-deployment-test-pr-1
+      #   env:
+      #     RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
       - name: Deploy
         run: railway up
         env:
