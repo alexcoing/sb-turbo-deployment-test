@@ -1,4 +1,4 @@
-name: Railway Web App Deploy
+name: Railway Deploy
 
 on:
   push:
@@ -26,8 +26,8 @@ jobs:
       - name: Deploy web
         run: railway up
         env:
-          RAILWAY_TOKEN_WEB: ${{ secrets.RAILWAY_TOKEN_WEB }}
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_WEB }}
       - name: Deploy docs
         run: railway up
         env:
-          RAILWAY_TOKEN_DOCS: ${{ secrets.RAILWAY_TOKEN_DOCS }}
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_DOCS }}
