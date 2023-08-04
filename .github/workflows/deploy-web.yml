@@ -1,9 +1,9 @@
 name: Railway Web App Deploy
 
 on:
-  # push:
-  #   branches:
-  #     - "TEST-**"
+  push:
+    branches:
+      - "TEST-**"
   pull_request:
     types: [opened, synchronize, reopened]
     branches:
