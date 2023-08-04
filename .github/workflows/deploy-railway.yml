@@ -1,0 +1,32 @@
+name: Railway Deploy
+# on:
+#   push:
+#     branches:
+#       - "TEST-**"
+#   pull_request:
+#     types: [opened, synchronize, reopened]
+#     branches:
+#       - "TEST-**"
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Set up Node.js environment
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: "16"
+#       - name: Check Node.js version
+#         run: node -v
+#       - name: Install Railway
+#         run: npm i -g @railway/cli
+#       - name: Deploy web
+#         run: railway up
+#         env:
+#           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_WEB }}
+#       - name: Deploy docs
+#         run: railway up
+#         env:
+#           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_DOCS }}
