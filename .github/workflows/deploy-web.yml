@@ -1,4 +1,4 @@
-name: Railway Test Environment Deploy
+name: Railway Web App Deploy
 
 on:
   push:
